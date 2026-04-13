@@ -3,10 +3,11 @@ import { motion } from 'motion/react'
 
 type Props = {
   title: string
+  subtitle?: string
   children: ReactNode
 }
 
-export function SlideLayout({ title, children }: Props) {
+export function SlideLayout({ title, subtitle, children }: Props) {
   return (
     <div className="flex h-full w-full flex-col">
       <motion.h2
@@ -17,6 +18,16 @@ export function SlideLayout({ title, children }: Props) {
       >
         {title}
       </motion.h2>
+      {subtitle && (
+        <motion.p
+          className="mx-auto mt-4 max-w-3xl text-center text-lg text-neutral-400"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.35, delay: 0.1 }}
+        >
+          {subtitle}
+        </motion.p>
+      )}
       <div className="mt-12 flex flex-1 flex-col items-center justify-center">
         {children}
       </div>
