@@ -12,6 +12,9 @@ import { PromptIsContextSlide } from './PromptIsContextSlide'
 import { LLMPrincipleSlide } from './LLMPrincipleSlide'
 import { NextTokenPredictorSlide } from './NextTokenPredictorSlide'
 import { TokenGenerationSlide } from './TokenGenerationSlide'
+import { ContextEqualsInputSlide } from './ContextEqualsInputSlide'
+import { ContextWindowSlide } from './ContextWindowSlide'
+import { ContextWindowSizesSlide } from './ContextWindowSizesSlide'
 
 export const slides: ComponentType[] = [
   TitleSlide,
@@ -27,4 +30,7 @@ export const slides: ComponentType[] = [
   LLMPrincipleSlide,
   NextTokenPredictorSlide,
   TokenGenerationSlide,
+  ContextEqualsInputSlide,
+  ContextWindowSlide,
+  ContextWindowSizesSlide,
 ]

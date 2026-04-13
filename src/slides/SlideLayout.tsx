@@ -20,7 +20,7 @@ export function SlideLayout({ title, subtitle, children }: Props) {
       </motion.h2>
       {subtitle && (
         <motion.p
-          className="mx-auto mt-4 max-w-3xl text-center text-lg text-neutral-400"
+          className="mx-auto mt-4 max-w-3xl whitespace-pre-line text-center text-lg text-neutral-400"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.35, delay: 0.1 }}
