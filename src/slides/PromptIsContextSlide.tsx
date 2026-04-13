@@ -1,5 +1,5 @@
-import { motion } from 'motion/react'
-import { SlideLayout } from './SlideLayout'
+import { motion } from "motion/react";
+import { SlideLayout } from "./SlideLayout";
 
 function Lines({ widths }: { widths: string[] }) {
   return (
@@ -12,15 +12,12 @@ function Lines({ widths }: { widths: string[] }) {
         />
       ))}
     </div>
-  )
+  );
 }
 
 export function PromptIsContextSlide() {
   return (
-    <SlideLayout
-      title="프롬프트도 결국 컨텍스트"
-      subtitle="컨텍스트에 대해 잘 이해해야 좋은 프롬프팅을 할 수 있어요"
-    >
+    <SlideLayout title="프롬프트도 컨텍스트의 일부">
       <motion.div
         className="relative w-full max-w-4xl rounded-3xl border border-emerald-400/40 bg-emerald-400/5 p-8 pt-10"
         initial={{ opacity: 0, scale: 0.96 }}
@@ -41,7 +38,7 @@ export function PromptIsContextSlide() {
             <div className="mb-3 font-mono text-sm font-medium tracking-wide text-violet-300">
               SYSTEM:
             </div>
-            <Lines widths={['100%', '92%', '78%']} />
+            <Lines widths={["100%", "92%", "78%"]} />
           </motion.div>
 
           <motion.div
@@ -50,7 +47,7 @@ export function PromptIsContextSlide() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4, delay: 0.6 }}
           >
-            <Lines widths={['100%', '86%', '68%']} />
+            <Lines widths={["100%", "86%", "68%"]} />
           </motion.div>
 
           <motion.div
@@ -59,7 +56,7 @@ export function PromptIsContextSlide() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4, delay: 0.8 }}
           >
-            <Lines widths={['100%', '74%']} />
+            <Lines widths={["100%", "74%"]} />
           </motion.div>
 
           <motion.div
@@ -71,10 +68,10 @@ export function PromptIsContextSlide() {
             <div className="mb-3 font-mono text-sm font-medium tracking-wide text-sky-300">
               USER:
             </div>
-            <Lines widths={['88%', '72%']} />
+            <Lines widths={["88%", "72%"]} />
           </motion.div>
         </div>
       </motion.div>
     </SlideLayout>
-  )
+  );
 }

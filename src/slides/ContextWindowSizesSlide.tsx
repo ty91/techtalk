@@ -1,47 +1,47 @@
-import { motion } from 'motion/react'
-import { SlideLayout } from './SlideLayout'
+import { motion } from "motion/react";
+import { SlideLayout } from "./SlideLayout";
 
-const RECT = 10
-const GAP = 2
-const VISUAL_HEIGHT = 150
+const RECT = 10;
+const GAP = 2;
+const VISUAL_HEIGHT = 150;
 
 type Visual =
-  | { kind: 'small' }
-  | { kind: 'grid'; cols: number; rows: number }
-  | { kind: 'split'; cols: number; topRows: number; bottomRows: number }
+  | { kind: "small" }
+  | { kind: "grid"; cols: number; rows: number }
+  | { kind: "split"; cols: number; topRows: number; bottomRows: number };
 
-type Item = { size: string; label: string; visual: Visual }
+type Item = { size: string; label: string; visual: Visual };
 
 const ITEMS: Item[] = [
   {
-    size: '0.5k',
-    label: 'Attention Is All You Need',
-    visual: { kind: 'small' },
+    size: "0.5k",
+    label: "Attention Is All You Need",
+    visual: { kind: "small" },
   },
   {
-    size: '4k',
-    label: 'GPT-3',
-    visual: { kind: 'grid', cols: 2, rows: 2 },
+    size: "4k",
+    label: "GPT-3",
+    visual: { kind: "grid", cols: 2, rows: 2 },
   },
   {
-    size: '16k',
-    label: 'ChatGPT 3.5',
-    visual: { kind: 'grid', cols: 4, rows: 4 },
+    size: "16k",
+    label: "ChatGPT 3.5",
+    visual: { kind: "grid", cols: 4, rows: 4 },
   },
   {
-    size: '200k',
-    label: 'Claude',
-    visual: { kind: 'split', cols: 8, topRows: 4, bottomRows: 4 },
+    size: "200k",
+    label: "Claude",
+    visual: { kind: "split", cols: 8, topRows: 4, bottomRows: 4 },
   },
   {
-    size: '1M',
-    label: 'Gemini, Claude',
-    visual: { kind: 'split', cols: 12, topRows: 5, bottomRows: 5 },
+    size: "1M",
+    label: "Gemini, Claude",
+    visual: { kind: "split", cols: 12, topRows: 5, bottomRows: 5 },
   },
-]
+];
 
-const REVEAL_BASE_S = 0.35
-const REVEAL_GAP_S = 0.55
+const REVEAL_BASE_S = 0.35;
+const REVEAL_GAP_S = 0.55;
 
 export function ContextWindowSizesSlide() {
   return (
@@ -87,26 +87,27 @@ export function ContextWindowSizesSlide() {
         }}
       >
         그래서 이제는 한 토큰을 생성할 때, 이전의 모든 토큰이 컨텍스트라고
-        생각해도 대충 맞습니다
+        생각해도 대충 맞습니다 <br />
+        그러니까, 컨텍스트 윈도우라는 개념을 별로 생각할 필요가 없다는 뜻이죠
       </motion.p>
     </SlideLayout>
-  )
+  );
 }
 
 function Visualization({ visual }: { visual: Visual }) {
   switch (visual.kind) {
-    case 'small':
-      return <Rect width={RECT / 2} height={RECT / 2} />
-    case 'grid':
-      return <Grid cols={visual.cols} rows={visual.rows} />
-    case 'split':
+    case "small":
+      return <Rect width={RECT / 2} height={RECT / 2} />;
+    case "grid":
+      return <Grid cols={visual.cols} rows={visual.rows} />;
+    case "split":
       return (
         <div className="flex flex-col items-center gap-1.5">
           <Grid cols={visual.cols} rows={visual.topRows} />
           <div className="text-lg leading-none text-teal-300/80">⋮</div>
           <Grid cols={visual.cols} rows={visual.bottomRows} />
         </div>
-      )
+      );
   }
 }
 
@@ -123,14 +124,11 @@ function Grid({ cols, rows }: { cols: number; rows: number }) {
         <Rect key={i} width={RECT} height={RECT} />
       ))}
     </div>
-  )
+  );
 }
 
 function Rect({ width, height }: { width: number; height: number }) {
   return (
-    <div
-      className="rounded-sm bg-teal-400/70"
-      style={{ width, height }}
-    />
-  )
+    <div className="rounded-sm bg-teal-400/70" style={{ width, height }} />
+  );
 }

@@ -91,8 +91,10 @@ export function WiderContextSlide() {
 
   return (
     <SlideLayout
-      title="'컨텍스트'의 의미를 넓혀봅시다"
-      subtitle={"컨텍스트는, LLM이 답을 생성하기 위해 입력받은 모든 정보"}
+      title="'컨텍스트'의 의미를 차근차근 넓혀봅시다"
+      subtitle={
+        "컨텍스트는, LLM이 답을 생성하기 위해 입력받은 모든 정보라고 할 수 있어요"
+      }
     >
       <motion.div
         layout
