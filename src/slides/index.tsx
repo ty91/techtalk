@@ -1,8 +1,8 @@
 import type { ComponentType } from "react";
 import { TitleSlide } from "./TitleSlide";
 import { PromptHypeSlide } from "./PromptHypeSlide";
-import { OutdatedQuestionSlide } from "./OutdatedQuestionSlide";
-import { NotOutdatedSlide } from "./NotOutdatedSlide";
+// import { OutdatedQuestionSlide } from "./OutdatedQuestionSlide";
+// import { NotOutdatedSlide } from "./NotOutdatedSlide";
 import { GuidelinesSlide } from "./GuidelinesSlide";
 import { TechniquesSlide } from "./TechniquesSlide";
 import { CoaxingFailSlide } from "./CoaxingFailSlide";
@@ -11,10 +11,10 @@ import { GrowingLLMSlide } from "./GrowingLLMSlide";
 import { SystemBrainSlide } from "./SystemBrainSlide";
 import { ContextEngineeringSlide } from "./ContextEngineeringSlide";
 import { WhatIsContextSlide } from "./WhatIsContextSlide";
-import { UserVsSystemSlide } from "./UserVsSystemSlide";
-import { SystemPromptRevealSlide } from "./SystemPromptRevealSlide";
-import { CodexSystemPromptSlide } from "./CodexSystemPromptSlide";
-import { PromptIsContextSlide } from "./PromptIsContextSlide";
+// import { UserVsSystemSlide } from "./UserVsSystemSlide";
+// import { SystemPromptRevealSlide } from "./SystemPromptRevealSlide";
+// import { CodexSystemPromptSlide } from "./CodexSystemPromptSlide";
+// import { PromptIsContextSlide } from "./PromptIsContextSlide";
 import { LLMPrincipleSlide } from "./LLMPrincipleSlide";
 import { NextTokenPredictorSlide } from "./NextTokenPredictorSlide";
 import { TokenGenerationSlide } from "./TokenGenerationSlide";
@@ -27,7 +27,16 @@ import { ContextDumpSlide } from "./ContextDumpSlide";
 import { ContextRotSlide } from "./ContextRotSlide";
 import { InstructionFollowingSlide } from "./InstructionFollowingSlide";
 import { TokenCostSlide } from "./TokenCostSlide";
-import { ContextIsEverythingSlide } from "./ContextIsEverythingSlide";
+import { ContextMattersSlide } from "./ContextMattersSlide";
+import { ContextEngineeringTermSlide } from "./ContextEngineeringTermSlide";
+import { ContextEngineeringDirectionSlide } from "./ContextEngineeringDirectionSlide";
+import { AnthropicGuideSlide } from "./AnthropicGuideSlide";
+import { SystemPromptSpectrumSlide } from "./SystemPromptSpectrumSlide";
+import { ToolSetSlide } from "./ToolSetSlide";
+import { ContextRetrievalSlide } from "./ContextRetrievalSlide";
+import { ContextCompactionSlide } from "./ContextCompactionSlide";
+import { TakeHomeSlide } from "./TakeHomeSlide";
+// import { ContextIsEverythingSlide } from "./ContextIsEverythingSlide";
 
 export const slides: ComponentType[] = [
   TitleSlide,
@@ -52,13 +61,22 @@ export const slides: ComponentType[] = [
   ContextRotSlide,
   InstructionFollowingSlide,
   TokenCostSlide,
+  ContextMattersSlide,
+  ContextEngineeringTermSlide,
+  ContextEngineeringDirectionSlide,
+  AnthropicGuideSlide,
+  SystemPromptSpectrumSlide,
+  ToolSetSlide,
+  ContextRetrievalSlide,
+  ContextCompactionSlide,
+  TakeHomeSlide,
 
   // 이 아래부터는 outdated slides. 나중에 쓸 수도 있으니 일단 킵함
-  PromptIsContextSlide,
-  OutdatedQuestionSlide,
-  NotOutdatedSlide,
-  UserVsSystemSlide,
-  SystemPromptRevealSlide,
-  CodexSystemPromptSlide,
-  ContextIsEverythingSlide,
+  // PromptIsContextSlide,
+  // OutdatedQuestionSlide,
+  // NotOutdatedSlide,
+  // UserVsSystemSlide,
+  // SystemPromptRevealSlide,
+  // CodexSystemPromptSlide,
+  // ContextIsEverythingSlide,
 ];

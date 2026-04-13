@@ -14,7 +14,7 @@ export function SlideLayout({ title, subtitle, children }: Props) {
         className="text-center text-5xl font-semibold"
         initial={{ opacity: 0, y: -8 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.35, ease: 'easeOut' }}
+        transition={{ duration: 0.35, delay: 0.2, ease: 'easeOut' }}
       >
         {title}
       </motion.h2>
@@ -23,7 +23,7 @@ export function SlideLayout({ title, subtitle, children }: Props) {
           className="mx-auto mt-4 max-w-3xl whitespace-pre-line text-center text-lg text-neutral-400"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.35, delay: 0.1 }}
+          transition={{ duration: 0.35, delay: 0.3 }}
         >
           {subtitle}
         </motion.p>
