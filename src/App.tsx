@@ -30,7 +30,7 @@ function App() {
 
   return (
     <div className="relative h-full w-full overflow-hidden bg-neutral-950 text-neutral-100">
-      <AnimatePresence mode="wait" custom={direction}>
+      <AnimatePresence mode="popLayout" custom={direction}>
         <motion.div
           key={index}
           custom={direction}
