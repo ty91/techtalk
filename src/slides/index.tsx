@@ -21,7 +21,12 @@ import { TokenGenerationSlide } from "./TokenGenerationSlide";
 import { ContextEqualsInputSlide } from "./ContextEqualsInputSlide";
 import { ContextWindowSlide } from "./ContextWindowSlide";
 import { ContextWindowSizesSlide } from "./ContextWindowSizesSlide";
+import { ContextExpansionSlide } from "./ContextExpansionSlide";
 import { WiderContextSlide } from "./WiderContextSlide";
+import { ContextDumpSlide } from "./ContextDumpSlide";
+import { ContextRotSlide } from "./ContextRotSlide";
+import { InstructionFollowingSlide } from "./InstructionFollowingSlide";
+import { TokenCostSlide } from "./TokenCostSlide";
 import { ContextIsEverythingSlide } from "./ContextIsEverythingSlide";
 
 export const slides: ComponentType[] = [
@@ -41,7 +46,14 @@ export const slides: ComponentType[] = [
   ContextEqualsInputSlide,
   ContextWindowSlide,
   ContextWindowSizesSlide,
+  ContextExpansionSlide,
   WiderContextSlide,
+  ContextDumpSlide,
+  ContextRotSlide,
+  InstructionFollowingSlide,
+  TokenCostSlide,
+
+  // 이 아래부터는 outdated slides. 나중에 쓸 수도 있으니 일단 킵함
   PromptIsContextSlide,
   OutdatedQuestionSlide,
   NotOutdatedSlide,
