@@ -4,6 +4,8 @@ import { PromptHypeSlide } from './PromptHypeSlide'
 import { GuidelinesSlide } from './GuidelinesSlide'
 import { TechniquesSlide } from './TechniquesSlide'
 import { UserVsSystemSlide } from './UserVsSystemSlide'
+import { SystemPromptRevealSlide } from './SystemPromptRevealSlide'
+import { CodexSystemPromptSlide } from './CodexSystemPromptSlide'
 
 export const slides: ComponentType[] = [
   TitleSlide,
@@ -11,4 +13,6 @@ export const slides: ComponentType[] = [
   GuidelinesSlide,
   TechniquesSlide,
   UserVsSystemSlide,
+  SystemPromptRevealSlide,
+  CodexSystemPromptSlide,
 ]
