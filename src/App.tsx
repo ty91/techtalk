@@ -38,7 +38,7 @@ function App() {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -40 * direction }}
           transition={{ duration: 0.35, ease: 'easeOut' }}
-          className="absolute inset-0 flex items-center justify-center p-12"
+          className="absolute inset-0 p-12"
         >
           <Slide />
         </motion.div>
