@@ -11,6 +11,7 @@ import { CodexSystemPromptSlide } from './CodexSystemPromptSlide'
 import { PromptIsContextSlide } from './PromptIsContextSlide'
 import { LLMPrincipleSlide } from './LLMPrincipleSlide'
 import { NextTokenPredictorSlide } from './NextTokenPredictorSlide'
+import { TokenGenerationSlide } from './TokenGenerationSlide'
 
 export const slides: ComponentType[] = [
   TitleSlide,
@@ -25,4 +26,5 @@ export const slides: ComponentType[] = [
   PromptIsContextSlide,
   LLMPrincipleSlide,
   NextTokenPredictorSlide,
+  TokenGenerationSlide,
 ]
