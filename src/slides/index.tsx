@@ -15,6 +15,8 @@ import { TokenGenerationSlide } from './TokenGenerationSlide'
 import { ContextEqualsInputSlide } from './ContextEqualsInputSlide'
 import { ContextWindowSlide } from './ContextWindowSlide'
 import { ContextWindowSizesSlide } from './ContextWindowSizesSlide'
+import { WiderContextSlide } from './WiderContextSlide'
+import { ContextIsEverythingSlide } from './ContextIsEverythingSlide'
 
 export const slides: ComponentType[] = [
   TitleSlide,
@@ -33,4 +35,6 @@ export const slides: ComponentType[] = [
   ContextEqualsInputSlide,
   ContextWindowSlide,
   ContextWindowSizesSlide,
+  WiderContextSlide,
+  ContextIsEverythingSlide,
 ]
