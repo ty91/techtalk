@@ -9,6 +9,7 @@ import { WebFetchExampleSlide } from "./WebFetchExampleSlide";
 import { HtmlHellSlide } from "./HtmlHellSlide";
 import { WebFetchFlowSlide } from "./WebFetchFlowSlide";
 import { SmarterWebFetchSlide } from "./SmarterWebFetchSlide";
+import { AgenticReadSlide } from "./AgenticReadSlide";
 
 export const slides: ComponentType[] = [
   TitleSlide,
@@ -21,4 +22,5 @@ export const slides: ComponentType[] = [
   HtmlHellSlide,
   WebFetchFlowSlide,
   SmarterWebFetchSlide,
+  AgenticReadSlide,
 ];
