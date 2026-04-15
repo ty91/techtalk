@@ -1,26 +1,23 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
 import { slides } from './slides'
+import { useSlideIndex } from './useSlideIndex'
+import { PresenterView } from './PresenterView'
 
-function App() {
-  const [index, setIndex] = useState(0)
-  const [direction, setDirection] = useState(1)
-
-  const go = useCallback(
-    (delta: number) => {
-      setIndex((i) => {
-        const next = Math.min(slides.length - 1, Math.max(0, i + delta))
-        if (next !== i) setDirection(delta)
-        return next
-      })
-    },
-    []
-  )
+function AudienceView() {
+  const { index, direction, go } = useSlideIndex()
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') go(1)
       if (e.key === 'ArrowLeft' || e.key === 'PageUp') go(-1)
+      if (e.key === 'p' || e.key === 'P') {
+        window.open(
+          `${window.location.pathname}?mode=presenter`,
+          'slides-presenter',
+          'popup,width=1600,height=1000',
+        )
+      }
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
@@ -49,6 +46,12 @@ function App() {
       </div>
     </div>
   )
+}
+
+function App() {
+  const isPresenter =
+    new URLSearchParams(window.location.search).get('mode') === 'presenter'
+  return isPresenter ? <PresenterView /> : <AudienceView />
 }
 
 export default App
