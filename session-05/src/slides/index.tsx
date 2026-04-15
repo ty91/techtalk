@@ -6,6 +6,8 @@ import { ContextFillingSlide } from "./ContextFillingSlide";
 import { SolutionQuestionSlide } from "./SolutionQuestionSlide";
 import { CurationSolutionSlide } from "./CurationSolutionSlide";
 import { WebFetchExampleSlide } from "./WebFetchExampleSlide";
+import { HtmlHellSlide } from "./HtmlHellSlide";
+import { WebFetchFlowSlide } from "./WebFetchFlowSlide";
 
 export const slides: ComponentType[] = [
   TitleSlide,
@@ -15,4 +17,6 @@ export const slides: ComponentType[] = [
   SolutionQuestionSlide,
   CurationSolutionSlide,
   WebFetchExampleSlide,
+  HtmlHellSlide,
+  WebFetchFlowSlide,
 ];
