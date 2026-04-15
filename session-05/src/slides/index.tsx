@@ -12,6 +12,12 @@ import { SmarterWebFetchSlide } from "./SmarterWebFetchSlide";
 import { AgenticReadSlide } from "./AgenticReadSlide";
 import { ExploreDelegationSlide } from "./ExploreDelegationSlide";
 import { ExploreSubagentSlide } from "./ExploreSubagentSlide";
+import { ParallelExploreSlide } from "./ParallelExploreSlide";
+import { CustomAgentsSlide } from "./CustomAgentsSlide";
+import { CommonAgentTypesSlide } from "./CommonAgentTypesSlide";
+import { ResearcherAgentPromptSlide } from "./ResearcherAgentPromptSlide";
+import { ReadabilityReviewerAgentPromptSlide } from "./ReadabilityReviewerAgentPromptSlide";
+import { WorkflowSlide } from "./WorkflowSlide";
 
 export const slides: ComponentType[] = [
   TitleSlide,
@@ -27,4 +33,10 @@ export const slides: ComponentType[] = [
   AgenticReadSlide,
   ExploreDelegationSlide,
   ExploreSubagentSlide,
+  ParallelExploreSlide,
+  CustomAgentsSlide,
+  CommonAgentTypesSlide,
+  ResearcherAgentPromptSlide,
+  ReadabilityReviewerAgentPromptSlide,
+  WorkflowSlide,
 ];
