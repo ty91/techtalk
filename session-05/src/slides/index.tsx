@@ -5,6 +5,7 @@ import { MrcrSlide } from "./MrcrSlide";
 import { ContextFillingSlide } from "./ContextFillingSlide";
 import { SolutionQuestionSlide } from "./SolutionQuestionSlide";
 import { CurationSolutionSlide } from "./CurationSolutionSlide";
+import { WebFetchExampleSlide } from "./WebFetchExampleSlide";
 
 export const slides: ComponentType[] = [
   TitleSlide,
@@ -13,4 +14,5 @@ export const slides: ComponentType[] = [
   ContextFillingSlide,
   SolutionQuestionSlide,
   CurationSolutionSlide,
+  WebFetchExampleSlide,
 ];
