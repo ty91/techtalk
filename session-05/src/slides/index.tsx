@@ -1,10 +1,16 @@
 import type { ComponentType } from "react";
 import { TitleSlide } from "./TitleSlide";
-import { BulletsSlide } from "./BulletsSlide";
-import { DiagramSlide } from "./DiagramSlide";
+import { ContextManagementSlide } from "./ContextManagementSlide";
+import { MrcrSlide } from "./MrcrSlide";
+import { ContextFillingSlide } from "./ContextFillingSlide";
+import { SolutionQuestionSlide } from "./SolutionQuestionSlide";
+import { CurationSolutionSlide } from "./CurationSolutionSlide";
 
 export const slides: ComponentType[] = [
   TitleSlide,
-  BulletsSlide,
-  DiagramSlide,
+  ContextManagementSlide,
+  MrcrSlide,
+  ContextFillingSlide,
+  SolutionQuestionSlide,
+  CurationSolutionSlide,
 ];
